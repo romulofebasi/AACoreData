@@ -65,8 +65,8 @@ open class AACoreData {
         return managedObjectContext!
     }()
     
-    // iOS-10
-    @available(iOS 10.0, *)
+    // iOS-10 (minimum target version is 11.0 after Xcode 14.1 update)
+    // @available(iOS 10.0, *)
     lazy var persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: self.dataModel)
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
